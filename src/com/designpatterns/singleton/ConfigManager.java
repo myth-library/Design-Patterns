@@ -19,6 +19,5 @@ public class ConfigManager {
 	
 	public Object get(String key) {
 		return settings.get(key);
-	}
-	
+	}	
 }
