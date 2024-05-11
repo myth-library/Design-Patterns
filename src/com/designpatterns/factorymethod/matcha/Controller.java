@@ -7,8 +7,12 @@ import java.util.Map;
 public class Controller {
 	// Here is the method for rendering a view
 	public void render(String viewName, Map<String, Object> context) {
-		var engine = new MatchaViewEngine();
+		ViewEngine engine = createViewEngine();
 		var html = engine.render(viewName, context);
 		System.out.println(html);
+	}
+	
+	protected ViewEngine createViewEngine() {
+		return new MatchaViewEngine();
 	}
 }
