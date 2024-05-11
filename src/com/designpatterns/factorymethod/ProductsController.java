@@ -8,12 +8,12 @@ import com.designpatterns.factorymethod.matcha.MatchaViewEngine;
 import com.designpatterns.factorymethod.sharp.SharpController;
 
 // This class will use in framework to build product page
-public class ProductsController extends SharpController {
+public class ProductsController extends Controller {
 	// Here is the method for listing the products
 	public void listProducts() {
 		// In real-world application, get products from a database
 		Map<String, Object> context = new HashMap<>();
 		// context.put(products)
-		render("products.html", context, new MatchaViewEngine());
+		render("products.html", context);
 	}
 } 
