@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.designpatterns.factorymethod.matcha.Controller;
-import com.designpatterns.factorymethod.matcha.MatchaViewEngine;
 import com.designpatterns.factorymethod.sharp.SharpController;
 
 // This class will use in framework to build product page
