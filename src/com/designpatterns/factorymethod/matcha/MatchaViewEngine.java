@@ -9,6 +9,6 @@ public class MatchaViewEngine implements ViewEngine {
 	public String render(String viewName, Map<String, Object> context) {
 		/* let's return a simple string instead of implementing 
 		   an actual rendering algorithm */
-		return "View rendered by Matcha"; 
+		return "View rendered by Matcha view engine"; 
 	}
 }

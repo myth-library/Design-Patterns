@@ -6,8 +6,13 @@ import java.util.Map;
 // Base class for the all controllers
 public class Controller {
 	// Here is the method for rendering a view
-	public void render(String viewName, Map<String, Object> context, ViewEngine engine) {
+	public void render(String viewName, Map<String, Object> context) {
+		ViewEngine engine = createViewEngine();
 		var html = engine.render(viewName, context);
 		System.out.println(html);
+	}
+	
+	protected ViewEngine createViewEngine() {
+		return new MatchaViewEngine();
 	}
 }
