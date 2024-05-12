@@ -1,11 +1,6 @@
 package com.designpatterns.bridge;
 
-public class SonyAdvancedRemoteControl extends AdvancedRemoteControl {
-	@Override
-	public void setChannel(int number) {
-		System.out.println("Sony: setChannel");
-	}
-
+public class SonyTV implements IDevice {
 	@Override
 	public void turnOn() {
 		System.out.println("Sony: turnOn");
@@ -14,5 +9,10 @@ public class SonyAdvancedRemoteControl extends AdvancedRemoteControl {
 	@Override
 	public void turnOff() {
 		System.out.println("Sony: turnOff");
+	}
+
+	@Override
+	public void setChannel(int number) {
+		System.out.println("Sony: setChannel");
 	}
 }
