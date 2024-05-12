@@ -1,5 +1,7 @@
-# -- Designe Pattern Name --
+# Bridge Pattern
 
 ## Problem Definition
+
+- hierarchy complexity
 
 ## Solution
