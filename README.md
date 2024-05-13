@@ -1,4 +1,4 @@
-# -- Designe Pattern Name --
+# Stategy Pattern
 
 ## Problem Definition
 
