@@ -1,7 +1,11 @@
 package com.designpatterns;
 
+import com.designpatterns.templatemethod.GenerateReportTask;
+import com.designpatterns.templatemethod.TransferMoneyTask;
+
 public class Main {
 	public static void main(String[] args) {
-		System.out.println("Hello World");
+		var task = new GenerateReportTask();
+		task.execute();
 	}
 }

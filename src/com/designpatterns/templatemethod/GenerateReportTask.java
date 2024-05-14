@@ -1,15 +1,8 @@
 package com.designpatterns.templatemethod;
 
-public class GenerateReportTask {
-	private AuditTrail auditTrail;
-
-	public GenerateReportTask(AuditTrail auditTrail) {
-		this.auditTrail = auditTrail;
-	}
-	
-	public void execute() {
-		auditTrail.record();
-		
+public class GenerateReportTask extends Task {
+	@Override
+	protected void doExecute() {
 		System.out.println("Generate Report");
 	}
 }
