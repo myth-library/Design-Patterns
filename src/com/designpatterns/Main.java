@@ -1,17 +1,22 @@
 package com.designpatterns;
 
-import com.designpatterns.command.BlackAndWhiteCommand;
-import com.designpatterns.command.CompositeCommand;
-import com.designpatterns.command.ResizeCommand;
+import com.designpatterns.command.editor.BoldCommand;
+import com.designpatterns.command.editor.History;
+import com.designpatterns.command.editor.HtmlDocument;
+import com.designpatterns.command.editor.UndoCommand;
 
 public class Main {
 	public static void main(String[] args) {
-		var composite = new CompositeCommand();
-		composite.add(new ResizeCommand());
-		composite.add(new BlackAndWhiteCommand());
-		composite.execute();
+		var history = new History();
+		var document = new HtmlDocument();
+		document.setContent("Hello World");
 		
-		// We can replay this multiple times
-		composite.execute();
+		var boldCommand = new BoldCommand(document, history);
+		boldCommand.execute();
+		System.out.println(document.getContent());
+		
+		var undoCommand = new UndoCommand(history);
+		undoCommand.execute();
+		System.out.println(document.getContent());
 	}
 }
