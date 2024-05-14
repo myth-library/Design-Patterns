@@ -1,10 +1,17 @@
-package com.designpatterns.command;
+package com.designpatterns.command.fx;
+
+// fx short for framework
 
 public class Button {
 	private String label;
+	private ICommand command;
+	
+	public Button(ICommand command) {
+		this.command = command;
+	}
 	
 	public void click() {
-		// ...
+		command.execute();
 	}
 
 	public String getLabel() {
